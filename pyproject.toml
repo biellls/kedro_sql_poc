@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "kedro-sql-poc"
+version = "0.1.0"
+description = ""
+authors = ["Gabriel Llobera <bielllobera@gmail.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+kedro = {extras = ["parquet"], version = "^0.18.3"}
+duckdb = "^0.6.0"
+pandas = "^1.5.2"
+kedro-viz = "^5.1.1"
+jinja2 = "^3.1.2"
+openpyxl = ">=3.0.6,<4.0"
+pyarrow = ">=1.0,<7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.kedro]
+package_name = "kbt"
+project_name = "kbt"
+project_version = "0.18.3"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+addopts = """
+--cov-report term-missing \
+--cov src/kbt -ra"""
+
+[tool.coverage.report]
+fail_under = 0
+show_missing = true
+exclude_lines = ["pragma: no cover", "raise NotImplementedError"]
