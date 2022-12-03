@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is inspired by DBT, build your pipelines with plain SQL with Jinja2 templates.
+This project is inspired by DBT, build your pipelines with plain SQL and Jinja2 templates.
 Reference any input DAG by just using `{{ ref('output_name') }}` or any source from the catalog with `{{ source('source_name') }}` inside the SQL template.
 
 ![Pipeline Visualization](docs/source/kedro_viz.png)
@@ -57,8 +57,8 @@ Go to the `src/kbt/pipelines/data_processing/pipeline.py` and modify it like thi
 ```
 
 And delete the following SQL files:
-    - `src/kbt/sql/preprocessed_companies.sql`
-    - `src/kbt/sql/preprocessed_shuttles.sql`
+- `src/kbt/sql/preprocessed_companies.sql`
+- `src/kbt/sql/preprocessed_shuttles.sql`
 
 Run or visualize the pipeline, it will still work correctly mixing the python and SQL nodes.
 
