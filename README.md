@@ -2,8 +2,10 @@
 
 ## Overview
 
-This project is inspired by DBT, build your pipelines with just plain SQL with Jinja2 templates.
-Reference any input DAG by just using `{{ ref('output_name') }}` or any source from the catalog with `{{ source('source_name') }} inside the SQL template.
+This project is inspired by DBT, build your pipelines with plain SQL with Jinja2 templates.
+Reference any input DAG by just using `{{ ref('output_name') }}` or any source from the catalog with `{{ source('source_name') }}` inside the SQL template.
+
+![Pipeline Visualization](docs/source/kedro_viz.png)
 
 ## Example
 The file `src/kbt/sql/preprocessed_companies.sql`
