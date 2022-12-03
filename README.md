@@ -26,6 +26,9 @@ You can also use kedro parameters that you define in the following way:
 SELECT * FROM {{ source('companies') }} WHERE total_fleet_count > {{ param('min_fleet_count') }}
 ``` 
 
+Check out the [SQL templates](src/kbt/sql/)
+Check out the [dynamic pipeline bulding code](src/kbt/pipelines/data_processing/pipeline.py)
+
 ## Visualize the pipeline
 Try using `kedro viz` to visualize the generated pipeline.
 
