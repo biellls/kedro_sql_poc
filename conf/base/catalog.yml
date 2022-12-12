@@ -19,13 +19,17 @@ results:
   filepath: data/02_intermediate/results.parquet
 
 preprocessed_companies:
-  type: pandas.ParquetDataSet
-  filepath: data/02_intermediate/preprocessed_companies.parquet
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/preprocessed_companies.csv
 
 preprocessed_shuttles:
-  type: pandas.ParquetDataSet
-  filepath: data/02_intermediate/preprocessed_shuttles.parquet
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/preprocessed_shuttles.csv
 
 engine_reviews_report:
   type: pandas.CSVDataSet
   filepath: data/08_reporting/engine_reviews_report.csv
+
+shuttle_ratings:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/shuttle_ratings.csv
